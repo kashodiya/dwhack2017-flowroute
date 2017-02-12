@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Configure Flowroute SMS
+  form(action="/flock/config", method="post")
+    table
+      tr 
+        td Enter your Phone Number:
+        td
+          input(name="phoneNumber", value="12012895553")
+          input(name="userId", type="hidden", value="#{userId}")
+      tr 
+        td Flowroute Account Key
+        td
+          input(name="flowrouteKey", value="43584401")
+      tr 
+        td Flowroute Account Secret
+        td
+          input(name="flowrouteSecret", value="760f91afaecd3e620a8c9e09e8fc943a")
+      tr 
+        td
+        td
+          input(type="submit", value="Save Configuration")
+
+  
